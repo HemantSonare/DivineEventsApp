@@ -6,15 +6,15 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 
 const events = [
-  { title: "Haldi Ceremony", subtitle: "Vibrant yellow celebration", img: "/images/events/haldi.jpg" },
-  { title: "Mehndi Event", subtitle: "Traditional artistic beauty", img: "/images/events/mehndi.jpg" },
-  { title: "Birthday Party", subtitle: "Joy-filled memorable moments", img: "/images/events/birthday.jpg" },
-  { title: "Baby Shower", subtitle: "Blessings & celebrations", img: "/images/events/babyshower.jpg" },
-  { title: "Baby Welcome", subtitle: "Welcoming your little angel", img: "/images/events/babywelcome.jpg" },
-  { title: "Marriage Event", subtitle: "Elegant wedding arrangements", img: "/images/events/marriage.jpg" },
-  { title: "Pooja Ceremony", subtitle: "Divine traditional rituals", img: "/images/events/pooja.jpg" },
-  { title: "Inauguration Event", subtitle: "Opening with prosperity", img: "/images/events/inauguration.jpg" },
-  { title: "Anniversary Party", subtitle: "Celebrating pure love", img: "/images/events/anniversary.jpg" },
+  { title: "Haldi Ceremony", subtitle: "Vibrant yellow celebration", img: "/images/events/haldi.jpeg" },
+  { title: "Mehndi Event", subtitle: "Traditional artistic beauty", img: "/images/events/mehndi.jpeg" },
+  { title: "Birthday Party", subtitle: "Joy-filled memorable moments", img: "/images/events/birthday.jpeg" },
+  { title: "Baby Shower", subtitle: "Blessings & celebrations", img: "/images/events/babyshower.jpeg" },
+  { title: "Baby Welcome", subtitle: "Welcoming your little angel", img: "/images/events/babywelcome.jpeg" },
+  { title: "Marriage Event", subtitle: "Elegant wedding arrangements", img: "/images/events/marriage.jpeg" },
+  { title: "Pooja Ceremony", subtitle: "Divine traditional rituals", img: "/images/events/pooja.jpeg" },
+  { title: "Inauguration Event", subtitle: "Opening with prosperity", img: "/images/events/inauguration.jpeg" },
+  { title: "Anniversary Party", subtitle: "Celebrating pure love", img: "/images/events/anniversary.jpeg" },
 ];
 
 export default function Services() {

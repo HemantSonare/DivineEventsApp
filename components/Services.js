@@ -1,41 +1,47 @@
+// components/Services.js
+import { useState } from "react";
+
+const events = [
+  { title: "Haldi Ceremony", img: "/images/events/haldi.jpg" },
+  { title: "Mehndi Event", img: "/images/events/mehndi.jpg" },
+  { title: "Birthday Party", img: "/images/events/birthday.jpg" },
+  { title: "Baby Shower", img: "/images/events/babyshower.jpg" },
+  { title: "Baby Welcome", img: "/images/events/babywelcome.jpg" },
+  { title: "Marriage Event", img: "/images/events/marriage.jpg" },
+  { title: "Pooja Ceremony", img: "/images/events/pooja.jpg" },
+  { title: "Inauguration Event", img: "/images/events/inauguration.jpg" },
+  { title: "Anniversary Party", img: "/images/events/anniversary.jpg" },
+];
+
 export default function Services() {
+  const [index, setIndex] = useState(0);
+
+  const next = () => setIndex((index + 1) % events.length);
+  const prev = () => setIndex((index - 1 + events.length) % events.length);
+
+  const active = events[index];
+
   return (
     <section id="services" className="section">
       <div className="container">
-        <h2 className="section-title">Curated Luxury Services</h2>
-        <p className="section-sub">
-          We design and orchestrate immersive experiences where every touchpoint
-          feels considered, effortless, and unforgettable.
-        </p>
 
-        <div className="cards-grid">
-          <article className="card">
-            <div className="thumb thumb--wedding" />
-            <h3>Signature Weddings</h3>
-            <p>
-              Bespoke wedding concepts, décor, and production with intricate
-              detailing, flawless timelines, and a dedicated core team.
-            </p>
-          </article>
+        <h2 className="section-title">Our Event Expertise</h2>
+        <p className="section-sub">We craft every celebration with elegance and luxury.</p>
 
-          <article className="card">
-            <div className="thumb thumb--intimate" />
-            <h3>Intimate & Private Events</h3>
-            <p>
-              Curated gatherings, family celebrations, and milestones designed
-              with warmth, privacy, and refined aesthetics.
-            </p>
-          </article>
+        <div className="event-carousel">
 
-          <article className="card">
-            <div className="thumb thumb--destination" />
-            <h3>Destination Experiences</h3>
-            <p>
-              Turnkey planning for destination weddings and celebrations —
-              logistics, hospitality, guest management, and on-ground execution.
-            </p>
-          </article>
+          <div className="event-card">
+            <img src={active.img} alt={active.title} />
+            <h3>{active.title}</h3>
+          </div>
+
+          <div className="carousel-buttons">
+            <button onClick={prev}>‹</button>
+            <button onClick={next}>›</button>
+          </div>
+
         </div>
+
       </div>
     </section>
   );

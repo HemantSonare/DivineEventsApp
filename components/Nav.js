@@ -34,9 +34,6 @@ export default function Nav(){
         </nav>
 
         <div className="nav-actions">
-          <button className="btn-outline" onClick={()=> window.scrollTo({top:document.body.scrollHeight, behavior:'smooth'})}>
-            Get Brochure
-          </button>
           <button className="btn-gold" onClick={openWhats}>
             Book via WhatsApp
           </button>

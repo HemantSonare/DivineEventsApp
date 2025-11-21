@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 export default function Hero(){
   const openWhats = () => {
-    const phone = '+919999999999'.replace('+','')
+    const phone = '+917067869093'.replace('+','')
     const text = encodeURIComponent('Hello, I would like to enquire about Divine Events - VIP booking.')
     window.open(`https://wa.me/${phone}?text=${text}`, '_blank')
   }

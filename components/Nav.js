@@ -1,5 +1,4 @@
 // components/Nav.js
-
 import { useEffect, useState } from "react";
 
 export default function Nav() {
@@ -15,13 +14,13 @@ export default function Nav() {
     <header className={`nav-wrap ${elevate ? "nav-elevate" : ""}`}>
       <nav className="nav container">
 
-        {/* ---- PREMIUM LOGO ---- */}
+        {/* Logo */}
         <a href="#home" className="logo">
           <img src="/logo.png" alt="Divine Events Logo" className="nav-logo-img" />
         </a>
 
-        {/* ---- NAV LINKS ---- */}
-        <div className="nav-links">
+        {/* CENTERED NAV LINKS */}
+        <div className="nav-center-links">
           <a href="#home">Home</a>
           <a href="#services">Services</a>
           <a href="#gallery">Gallery</a>

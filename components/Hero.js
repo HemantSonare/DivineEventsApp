@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   const openWhatsApp = () => {
-    const phone = '+919999999999'.replace('+','');
+    const phone = '+917067869093'.replace('+','');
     const text = encodeURIComponent('Hello, I would like to enquire about a luxury event with Divine Events.');
     window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
   };
@@ -13,7 +13,7 @@ export default function Hero() {
         {/* TODO: Replace /videos/hero.mp4 with a real cinematic luxury event video file */}
         <video
           className="hero-video"
-          src="/videos/hero.mp4"
+          src="/videos/hero.jpg"
           autoPlay
           muted
           loop

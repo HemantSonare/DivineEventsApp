@@ -311,24 +311,21 @@ body {
 
 @keyframes chromeShine {
   0% {
-    transform: translateX(-140%);
+    transform: translateX(-160%);
     opacity: 0;
   }
-  30% {
-    transform: translateX(-80%);
-    opacity: 0.25;
+  20% {
+    opacity: 0.18;
   }
   50% {
     transform: translateX(40%);
-    opacity: 0.30;
+    opacity: 0.28;
   }
-  70% {
-    transform: translateX(120%);
-    opacity: 0.15;
+  80% {
+    opacity: 0.10;
   }
   100% {
-    transform: translateX(160%);
+    transform: translateX(180%);
     opacity: 0;
   }
 }
-

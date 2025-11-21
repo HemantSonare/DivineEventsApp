@@ -1,6 +1,7 @@
 export default function Footer() {
   return (
     <footer className="footer founders-footer">
+      
       <h3 className="founder-title">Founders</h3>
 
       <div className="founders-row">

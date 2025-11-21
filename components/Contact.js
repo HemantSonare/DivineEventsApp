@@ -31,7 +31,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section contact">
-      <div className="container contact-grid">
+        <div className="container">
         <form className="form" onSubmit={onSubmit}>
           <h2 className="section-title">Private Enquiry</h2>
           <p className="section-sub">
@@ -96,23 +96,6 @@ export default function Contact() {
           )}
         </form>
 
-        <aside className="contact-info">
-          <div className="info-card glass">
-            <h3>Direct Contact</h3>
-            <p>
-              For time-sensitive or ultra-private events, you can reach us
-              directly via WhatsApp or phone.
-            </p>
-            <ul>
-              <li>
-                <strong>WhatsApp:</strong> +91 99999 99999
-              </li>
-              <li>
-                <strong>Service Areas:</strong> Pan India & Destinations
-              </li>
-            </ul>
-          </div>
-        </aside>
       </div>
     </section>
   );

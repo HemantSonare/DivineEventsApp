@@ -40,42 +40,49 @@ body {
 .nav-wrap {
   position: sticky;
   top: 0;
-  z-index: 100;
-  overflow: hidden; /* IMPORTANT */
-  position: relative; /* REQUIRED for ::before */
+  z-index: 999; 
+  overflow: hidden;
+  position: relative;
+
   background: linear-gradient(
     135deg,
-    rgba(255, 215, 200, 0.65),
-    rgba(255, 190, 210, 0.65),
-    rgba(255, 225, 180, 0.65)
+    rgba(255, 215, 200, 0.35),
+    rgba(255, 190, 210, 0.35),
+    rgba(255, 225, 180, 0.35)
   );
-  backdrop-filter: blur(16px) saturate(160%);
-  border-bottom: 1px solid rgba(255, 200, 160, 0.4);
+
+  backdrop-filter: blur(22px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 200, 160, 0.45);
   transition: all 240ms ease;
 }
+
 
 
 .nav-wrap::before {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 1; /* ABOVE background - BELOW text */
+  z-index: 5; /* HIGHER THAN BACKGROUND */
 
   background: linear-gradient(
     120deg,
     transparent 0%,
-    rgba(255,255,255,0.18) 45%,
-    rgba(255,255,255,0.28) 50%,
-    rgba(255,255,255,0.18) 55%,
+    rgba(255,255,255,0.32) 45%,
+    rgba(255,255,255,0.55) 50%,
+    rgba(255,255,255,0.32) 55%,
     transparent 100%
   );
 
-  transform: translateX(-140%);
+  transform: translateX(-160%);
   opacity: 0;
+
+  mix-blend-mode: screen; /* ⭐  THIS IS THE MAGIC ⭐ */
+  filter: blur(8px);       /* gives real metal shine */
 
   animation: chromeShine 4s ease-in-out infinite;
   pointer-events: none;
 }
+
 
 
 .nav-wrap.nav-elevate {
@@ -311,18 +318,18 @@ body {
 
 @keyframes chromeShine {
   0% {
-    transform: translateX(-160%);
+    transform: translateX(-180%);
     opacity: 0;
   }
-  20% {
-    opacity: 0.18;
+  25% {
+    opacity: 0.35;
   }
   50% {
     transform: translateX(40%);
-    opacity: 0.28;
+    opacity: 0.55;
   }
-  80% {
-    opacity: 0.10;
+  75% {
+    opacity: 0.25;
   }
   100% {
     transform: translateX(180%);

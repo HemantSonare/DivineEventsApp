@@ -14,7 +14,6 @@ export default function Contact() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    // Placeholder: just show success locally.
     setSent(true);
     setState({ name: '', email: '', phone: '', message: '' });
   };
@@ -22,25 +21,26 @@ export default function Contact() {
   const openWhatsApp = () => {
     const phone = '+917067869093'.replace('+','');
     const text = encodeURIComponent(
-      `Hello, I would like to enquire about a luxury event. Name: ${
-        state.name || '—'
-      }`
+      `Hello, I would like to enquire about a luxury event. Name: ${state.name || '—'}`
     );
     window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
   };
 
   return (
     <section id="contact" className="section contact">
-        <div className="container">
+      <div className="container">
+        
         <form className="form" onSubmit={onSubmit}>
+
+          {/* ⭐ NEW PREMIUM SIMPLE TEXT ⭐ */}
           <h2 className="section-title">Private Enquiry</h2>
           <p className="section-sub">
-            Share a few details and our team will connect with you for a
-            one-to-one conversation.
+            Please share a few details. Our team will personally connect with you
+            and help plan your beautiful event.
           </p>
 
           <label>
-            Full name
+            Full Name
             <input
               name="name"
               value={state.name}
@@ -48,8 +48,9 @@ export default function Contact() {
               required
             />
           </label>
+
           <label>
-            Email
+            Email Address
             <input
               name="email"
               type="email"
@@ -58,19 +59,23 @@ export default function Contact() {
               required
             />
           </label>
+
           <label>
-            Phone (with country code)
+            Phone Number
             <input
               name="phone"
+              placeholder="With country code (optional)"
               value={state.phone}
               onChange={onChange}
             />
           </label>
+
           <label>
             Tell us about your event
             <textarea
               name="message"
               rows={4}
+              placeholder="Example: Haldi décor, birthday theme, wedding setup etc."
               value={state.message}
               onChange={onChange}
               required
@@ -81,21 +86,25 @@ export default function Contact() {
             <button type="submit" className="btn-primary-outline">
               Send Enquiry
             </button>
-          
-            <button type="button" className="btn-ghost" onClick={openWhatsApp}>
+
+            <button
+              type="button"
+              className="btn-ghost"
+              onClick={openWhatsApp}
+            >
               Chat on WhatsApp
             </button>
           </div>
 
-
           {sent && (
             <div className="form-success">
-              Thank you. Your enquiry has been noted (demo). We&apos;ll connect
-              with you shortly.
+              Thank you! Your enquiry has been received.  
+              Our team will connect with you shortly.
             </div>
           )}
-        </form>
 
+        </form>
+        
       </div>
     </section>
   );

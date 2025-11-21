@@ -9,18 +9,15 @@ export default function Hero() {
 
   return (
     <section id="home" className="hero">
-      <div className="hero-video-wrap" aria-hidden="true">
-        {/* TODO: Replace /videos/hero.mp4 with a real cinematic luxury event video file */}
-        <video
-          className="hero-video"
+      <div className="hero-img-wrap" aria-hidden="true">
+        <img
           src="/videos/hero.jpg"
-          autoPlay
-          muted
-          loop
-          playsInline
+          className="hero-img"
+          alt="Luxury wedding decor"
         />
-        <div className="hero-video-overlay" />
+        <div className="hero-img-overlay" />
       </div>
+
 
       <div className="container hero-content">
         <motion.div

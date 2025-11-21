@@ -20,7 +20,7 @@ export default function Contact() {
   };
 
   const openWhatsApp = () => {
-    const phone = '+919999999999'.replace('+','');
+    const phone = '+917067869093'.replace('+','');
     const text = encodeURIComponent(
       `Hello, I would like to enquire about a luxury event. Name: ${
         state.name || '—'
@@ -77,18 +77,16 @@ export default function Contact() {
             />
           </label>
 
-          <div className="form-actions">
+          <div className="form-buttons">
             <button type="submit" className="btn-primary-outline">
               Send Enquiry
             </button>
-            <button
-              type="button"
-              className="btn-ghost"
-              onClick={openWhatsApp}
-            >
+          
+            <button type="button" className="btn-ghost" onClick={openWhatsApp}>
               Chat on WhatsApp
             </button>
           </div>
+
 
           {sent && (
             <div className="form-success">

@@ -563,6 +563,7 @@ background: linear-gradient(
 
 /* footer */
 /* ---------------- FOOTER PREMIUM LUXURY ---------------- */
+/* ---------------- FOOTER PREMIUM LUXURY ---------------- */
 .footer {
   padding: 40px 20px;
   text-align: center;
@@ -571,19 +572,21 @@ background: linear-gradient(
   margin-top: 60px;
 }
 
-.footer h3 {
+.founder-title {
   font-family: "Playfair Display", serif;
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 600;
-  color: #4C1F10; /* Deep Luxury Brown */
-  margin-bottom: 22px;
+  color: #4C1F10;
+  margin-bottom: 28px;
 }
 
-.founders {
+.founders-row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 34px;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
 .founder-card {
@@ -591,17 +594,17 @@ background: linear-gradient(
 }
 
 .founder-card img {
-  width: 120px;
-  height: 120px;
-  border-radius: 999px;
+  width: 110px;
+  height: 110px;
+  border-radius: 100px;
   object-fit: cover;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.18);
 }
 
 .founder-card h4 {
   margin: 12px 0 4px;
   font-size: 18px;
-  color: #4C1F10; /* Premium Brown */
+  color: #4C1F10;
   font-family: "Playfair Display", serif;
   font-weight: 600;
 }
@@ -609,8 +612,13 @@ background: linear-gradient(
 .founder-card p {
   margin: 0;
   font-size: 15px;
-  color: #7A5243; /* Subtle Brown */
-  font-weight: 500;
+  color: #7A5243;
+}
+
+.footer-copy {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #7A5243;
 }
 
 

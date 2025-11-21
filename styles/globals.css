@@ -37,28 +37,30 @@ body {
 .container{max-width:var(--max-width);margin:0 auto;padding:0 20px;}
 
 /* ---------------- NAV ---------------- */
-.nav-wrap{
-  position: sticky;
-  top: 0;
-  z-index: 80;
-  backdrop-filter: blur(10px) saturate(120%);
-  transition: all 240ms ease;
-  border-bottom: 1px solid rgba(255,255,255,0.02);
-}
-
-.nav-wrap.nav-elevate{
+.nav-wrap {
   background: linear-gradient(
     135deg,
-    rgba(255, 205, 178, 0.92),
-    rgba(255, 175, 189, 0.92),
-    rgba(255, 225, 148, 0.92)
+    rgba(255, 215, 200, 0.72),
+    rgba(255, 190, 210, 0.72),
+    rgba(255, 225, 180, 0.72)
   );
-  border-bottom: 1px solid rgba(255, 210, 180, 0.5);
-  box-shadow: 
-    0 10px 35px rgba(0,0,0,0.25),
-    0 0 28px rgba(255, 200, 150, 0.25);
-  backdrop-filter: blur(18px) saturate(160%);
+  backdrop-filter: blur(18px) saturate(140%);
+  border-bottom: 1px solid rgba(255, 190, 150, 0.35);
+  transition: all 240ms ease;
 }
+
+
+.nav-wrap.nav-elevate {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 210, 180, 0.94),
+    rgba(255, 180, 190, 0.94),
+    rgba(255, 225, 160, 0.94)
+  );
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(255, 200, 160, 0.55);
+}
+
 
 /* navigation layout */
 .nav{

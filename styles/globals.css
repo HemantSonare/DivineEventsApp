@@ -20,13 +20,15 @@
 /* Reset + base */
 *{box-sizing:border-box}
 html,body,#__next{height:100%}
-body{
-  margin:0;
-  font-family: Inter, system-ui;
-  background: linear-gradient(135deg, #3F0071, #6A00B3, #C77DFF);
-  color: var(--ivory);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body {
+  margin: 0;
+  background: linear-gradient(
+    135deg,
+    #FFF3E6,
+    #FFE1D0,
+    #FFD6BB
+  );
+  font-family: Inter, sans-serif;
 }
 
 /* Container */

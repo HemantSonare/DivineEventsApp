@@ -42,8 +42,14 @@ body{
   border-bottom: 1px solid rgba(255,255,255,0.02);
 }
 .nav-wrap.nav-elevate{
-  background: linear-gradient(135deg, rgba(63,0,113,0.92), rgba(106,0,179,0.92));
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 205, 178, 0.92),   /* Soft Peach Gold */
+    rgba(255, 175, 189, 0.92),   /* Blush Rose Pink */
+    rgba(255, 225, 148, 0.92)    /* Champagne Gold */
+  );
+  box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+  backdrop-filter: blur(18px) saturate(160%);
 }
 
 /* navigation layout */

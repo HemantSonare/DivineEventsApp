@@ -276,7 +276,15 @@ body {
 }
 
 /* brand */
-.brand{ font-family: "Playfair Display", serif; font-size:44px; margin:0; color:var(--ivory); letter-spacing:0.06em; text-transform:uppercase; }
+.brand {
+  font-family: "Playfair Display", serif;
+  font-size: 54px;
+  margin: 0;
+  color: #fff9f4;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  text-shadow: 0 4px 14px rgba(0,0,0,0.45);
+}
 .brand .serif{ color:var(--gold-1); margin-right:8px; }
 
 /* gold line */
@@ -309,8 +317,36 @@ body {
 }
 
 
-.section-title{ font-family:"Playfair Display", serif; font-size:26px; margin:0 0 8px; color:var(--ivory); }
-.section-sub{ margin:0 0 18px; color: rgba(250,245,255,0.78); }
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #4C1F10; /* deep warm brown gold */
+  letter-spacing: 0.02em;
+  margin: 0;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 65px;
+  height: 4px;
+  border-radius: 999px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #FFD9A0, #FFBFAF);
+  box-shadow: 0 1px 8px rgba(255, 210, 180, 0.55);
+}
+
+.section-sub {
+  margin: 0 0 18px;
+  color: #80594E;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
 
 /* cards grid */
 .cards-grid {

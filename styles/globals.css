@@ -548,6 +548,18 @@ background: linear-gradient(
   box-shadow: 0 4px 12px rgba(0,0,0,0.14);
 }
 
+.form-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.form button {
+  margin: 0;
+  flex: 1; /* makes equal button size */
+  text-align: center;
+}
 
 /* footer */
 .footer{ padding:28px 0; text-align:center; color: rgba(255,250,245,0.72); }

@@ -215,11 +215,49 @@ body {
 .hero-img-wrap:hover .hero-img{ transform: scale(1.095); }
 
 /* overlay: purple→magenta glow + vignette */
-.hero-img-overlay{
-  position:absolute; inset:0; z-index:1;
-  background: linear-gradient(180deg, rgba(50,10,70,0.18), rgba(0,0,0,0.68));
-  mix-blend-mode: multiply;
+/* ULTRA PREMIUM HERO OVERLAY */
+.hero-img-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background:
+    radial-gradient(
+      circle at 40% 20%,
+      rgba(255, 210, 180, 0.28),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255, 190, 200, 0.22),
+      transparent 70%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.05),
+      rgba(0,0,0,0.40),
+      rgba(0,0,0,0.65)
+    );
+  
+  mix-blend-mode: soft-light;
 }
+
+.hero-gold-film {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 220, 180, 0.18),
+    transparent 70%
+  );
+  
+  mix-blend-mode: screen;
+  opacity: 0.35;
+}
+
 .hero-particles{
   position:absolute; inset:0; z-index:2; pointer-events:none;
   background-image: radial-gradient(rgba(255,215,130,0.022) 1px, transparent 1px);

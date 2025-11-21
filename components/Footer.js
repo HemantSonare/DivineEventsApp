@@ -9,13 +9,17 @@ export default function Footer() {
         <div className="founder-card">
           <img src="/images/founders/founder1.jpeg" alt="Founder 1" />
           <h4>Priyanshu Mhaski</h4>
-          <p>+91 7067869093</p>
+          <a href="tel:+917067869093" className="founder-phone">
+            +91 7067869093
+          </a>
         </div>
 
         <div className="founder-card">
           <img src="/images/founders/founder2.jpeg" alt="Founder 2" />
           <h4>Deepanshu Paleria</h4>
-          <p>+91 9399138456</p>
+          <a href="tel:+919399138456" className="founder-phone">
+            +91 9399138456
+          </a>
         </div>
 
       </div>

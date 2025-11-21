@@ -21,15 +21,14 @@ export default function Hero(){
 
   const openWhats = () => {
     const phone = WHATSAPP_PHONE.replace('+','');
-    const text = encodeURIComponent('Hello, I would like to enquire about Divine Events - VIP booking.');
+    const text = encodeURIComponent('Hello, I would like to enquire about Divine Events.');
     window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
   };
 
   return (
     <section id="home" className="hero">
       <div className="hero-img-wrap" aria-hidden="true">
-        {/* HERO_IMAGE constant is absolute path or uploaded file path */}
-        <img ref={imgRef} src={HERO_IMAGE} alt="Luxury wedding decor" className="hero-img" />
+        <img ref={imgRef} src={HERO_IMAGE} alt="Premium event decor" className="hero-img" />
         <div className="hero-img-overlay" />
         <div className="hero-gold-film"></div>
         <div className="hero-particles" />
@@ -44,11 +43,16 @@ export default function Hero(){
         >
           <h1 className="brand"><span className="serif">Divine</span> Events</h1>
           <div className="gold-line" />
-          <p className="lead">Bespoke weddings & curated celebrations — crafted for clients who expect the extraordinary.</p>
+
+          {/* ⭐ UPDATED PREMIUM SIMPLE CONTENT ⭐ */}
+          <p className="lead">
+            Beautiful weddings and celebrations, planned with love.  
+            We turn your moments into unforgettable memories.
+          </p>
 
           <div className="hero-ctas">
-            <button className="btn-gold" onClick={openWhats}>Book Private Consultation</button>
-            <a href="#services" className="btn-outline">Explore Services</a>
+            <button className="btn-gold" onClick={openWhats}>Chat With Our Team</button>
+            <a href="#services" className="btn-outline">Our Services</a>
           </div>
         </motion.div>
       </div>

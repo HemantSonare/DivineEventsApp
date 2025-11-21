@@ -37,19 +37,25 @@ body {
 .container{max-width:var(--max-width);margin:0 auto;padding:0 20px;}
 
 /* ---------------- NAV ---------------- */
+
+/* LOGO */
 .nav-logo-img {
-  height: 80px;
-  max-height: 80px;
-  filter: drop-shadow(0 0 6px rgba(255,200,150,0.4));
+  height: 78px;
+  max-height: 78px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 4px 14px rgba(0,0,0,0.18))
+          drop-shadow(0 0 6px rgba(255,180,150,0.35));
 }
 
-/* MOBILE LOGO FIX */
+/* Mobile logo boost */
 @media (max-width: 600px) {
   .nav-wrap {
-    height: 74px !important;
+    height: 80px !important;
   }
   .nav-logo-img {
-    height: 74px !important;
+    height: 80px !important;
   }
 }
 
@@ -58,50 +64,42 @@ body {
 .nav-wrap {
   position: sticky;
   top: 0;
-  z-index: 999; 
-  overflow: hidden;
-  position: relative;
-
-background: linear-gradient(
-  135deg,
-  rgba(255, 228, 215, 0.78),
-  rgba(255, 206, 195, 0.78),
-  rgba(255, 220, 180, 0.78)
-);
-
-
-  backdrop-filter: blur(22px) saturate(180%);
-  border-bottom: 1px solid rgba(255, 200, 160, 0.45);
-  transition: all 240ms ease;
+  z-index: 999;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 234, 222, 0.92),
+    rgba(255, 218, 198, 0.92),
+    rgba(255, 202, 175, 0.92)
+  );
+  backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 195, 160, 0.5);
+  transition: all 280ms ease;
+  height: 82px;
+  display: flex;
+  align-items: center;
 }
 
 
-
+/* Metallic shine */
 .nav-wrap::before {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 5; /* HIGHER THAN BACKGROUND */
-
   background: linear-gradient(
     120deg,
     transparent 0%,
-    rgba(255,255,255,0.32) 45%,
-    rgba(255,255,255,0.55) 50%,
-    rgba(255,255,255,0.32) 55%,
+    rgba(255,255,255,0.4) 45%,
+    rgba(255,255,255,0.9) 50%,
+    rgba(255,255,255,0.4) 55%,
     transparent 100%
   );
-
-  transform: translateX(-160%);
+  transform: translateX(-180%);
   opacity: 0;
-
-  mix-blend-mode: screen; /* ⭐  THIS IS THE MAGIC ⭐ */
-  filter: blur(8px);       /* gives real metal shine */
-
-  animation: chromeShine 4s ease-in-out infinite;
+  mix-blend-mode: screen;
+  filter: blur(8px);
+  animation: chromeShine 6s ease-in-out infinite;
   pointer-events: none;
 }
-
 
 
 .nav-wrap.nav-elevate {
@@ -122,17 +120,17 @@ background: linear-gradient(
     inset 0 -2px 6px rgba(255,255,255,0.18);      /* glossy highlight */
 }
 
-
-
-/* navigation layout */
-.nav{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-  height: 72px;
-  padding: 0 6px;
+/* Layout wrapper */
+.nav {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
 .logo{
   font-weight:800;
   color:var(--ivory);
@@ -154,45 +152,53 @@ background: linear-gradient(
 /* links */
 .nav-links {
   display: flex;
-  gap: 22px;
+  gap: 28px;
   align-items: center;
 }
 
 .nav-links a {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 18px;
-  font-weight: 500;
   color: #4C1F10;
-  padding: 6px 10px;
   text-decoration: none;
-  transition: 0.25s ease;
+  position: relative;
+  padding-bottom: 4px;
+  font-weight: 500;
+  transition: color .25s ease;
 }
 
+/* Hover color */
 .nav-links a:hover {
   color: #2E110B;
 }
 
 /* Active underline gold */
+/* Underline Premium */
 .nav-links a::after {
   content: "";
-  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
   height: 3px;
-  border-radius: 999px;
   background: linear-gradient(90deg, #FFD9A0, #FFC1A4);
+  border-radius: 999px;
   transform: scaleX(0);
-  transition: transform 0.3s ease;
+  transform-origin: left;
+  transition: transform .35s ease;
 }
 
 .nav-links a:hover::after,
-.nav-links a.active::after{
+.nav-links a.active::after {
   transform: scaleX(1);
 }
-
 /* Ensure mobile alignment */
 @media (max-width: 768px) {
+  .nav-links {
+    gap: 18px;
+  }
   .nav-links a {
     font-size: 16px;
-    padding: 4px 6px;
   }
 }
 

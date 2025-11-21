@@ -22,13 +22,11 @@
 html,body,#__next{height:100%}
 body{
   margin:0;
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: radial-gradient(1200px 600px at 10% 10%, rgba(154,0,199,0.09), transparent),
-              linear-gradient(115deg, var(--dg-1), var(--dg-2), var(--dg-3), var(--dg-4));
-  color:var(--ivory);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  -webkit-text-size-adjust:100%;
+  font-family: Inter, system-ui;
+  background: linear-gradient(135deg, #3F0071, #6A00B3, #C77DFF);
+  color: var(--ivory);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Container */

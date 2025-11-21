@@ -1,11 +1,13 @@
 :root {
-  --purple-900: #1b042f;
-  --purple-700: #5a1fb8;
-  --rose-500: #ea6fcf;
-  --gold: #ffd166;
-  --muted: #efe9f6;
-  --bg-gradient: radial-gradient(circle at top left, #4a148c, #120016 55%, #000000 100%);
-  --max-width: 1120px;
+  --bg-1: #120018;
+  --bg-2: #3b0066;
+  --bg-3: #7200a1;
+  --gold-1: #ffd166;
+  --gold-2: #ffdf8a;
+  --accent-rose: #ea6fcf;
+  --ivory: #fff7ee;
+  --muted: #d8cce3;
+  --max-width: 1200px;
 }
 
 *,

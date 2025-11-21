@@ -498,6 +498,21 @@ background: linear-gradient(
   opacity: 1;
 }
 
+.section-sub {
+  margin-bottom: 36px !important;
+}
+
+.swiper {
+  margin-top: 40px !important;
+}
+
+
+.swiper-slide {
+  padding-top: 20px !important;
+  padding-bottom: 30px !important;
+  display: flex !important;
+  justify-content: center !important;
+}
 
 /* gallery */
 .gallery-slide{ border-radius:12px; overflow:hidden; box-shadow: 0 18px 60px rgba(0,0,0,0.6); }

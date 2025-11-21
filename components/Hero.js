@@ -31,6 +31,7 @@ export default function Hero(){
         {/* HERO_IMAGE constant is absolute path or uploaded file path */}
         <img ref={imgRef} src={HERO_IMAGE} alt="Luxury wedding decor" className="hero-img" />
         <div className="hero-img-overlay" />
+        <div className="hero-gold-film"></div>
         <div className="hero-particles" />
       </div>
 

@@ -708,6 +708,42 @@ body {
   margin-top: 10px;
 }
 
+/* MOBILE NAV FIX */
+@media (max-width: 768px) {
+
+  .nav {
+    justify-content: space-between;
+    padding: 0 12px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .nav-links a {
+    font-size: 16px !important;
+    padding: 4px 6px !important;
+    margin-right: 6px;
+  }
+
+  .nav-links a::after {
+    bottom: -4px;
+  }
+
+  /* prevent overlapping */
+  .logo {
+    flex-shrink: 0 !important;
+  }
+
+  /* ensure nav stays clean */
+  .nav-wrap {
+    height: 74px !important;
+    padding-right: 10px;
+  }
+}
 
 
 

@@ -202,13 +202,48 @@ body{
 .hero-ctas{ margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; }
 
 /* ---------------- SECTIONS ---------------- */
-.section{ padding:64px 0; background:transparent; }
+/* REMOVE PURPLE BACKGROUNDS — APPLY ROSE GOLD ELEGANCE */
+.section {
+  padding: 64px 0;
+  background: linear-gradient(
+    180deg,
+    #FFF7EE,
+    #FFEBD4,
+    #FFDCC2
+  );
+}
+
+.section.alt {
+  background: linear-gradient(
+    180deg,
+    #FFEBD4,
+    #FFF7EE
+  );
+}
+
 .section-title{ font-family:"Playfair Display", serif; font-size:26px; margin:0 0 8px; color:var(--ivory); }
 .section-sub{ margin:0 0 18px; color: rgba(250,245,255,0.78); }
 
 /* cards grid */
-.cards-grid{ display:grid; grid-template-columns:1fr; gap:16px; }
-.card{ border-radius:14px; overflow:hidden; border:1px solid rgba(255,255,255,0.04); background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:0; box-shadow: 0 18px 60px rgba(0,0,0,0.6);}
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.card {
+  border-radius: 18px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 180, 140, 0.35);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 245, 230, 0.72),
+    rgba(255, 225, 200, 0.65),
+    rgba(255, 205, 170, 0.55)
+  );
+  box-shadow: 0 14px 40px rgba(0,0,0,0.3);
+}
 
 /* gallery */
 .gallery-slide{ border-radius:12px; overflow:hidden; box-shadow: 0 18px 60px rgba(0,0,0,0.6); }

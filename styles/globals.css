@@ -395,20 +395,6 @@ background: linear-gradient(
   gap: 12px;
 }
 
-.event-carousel {
-  max-width: 420px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-}
-
-.event-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 18px;
-  border: 1px solid rgba(255,180,160,0.35);
-  box-shadow: 0 10px 35px rgba(0,0,0,0.18);
-}
 
 .event-card img {
   width: 100%;
@@ -499,19 +485,8 @@ background: linear-gradient(
   opacity: 1;
 }
 
-.section-sub {
-  margin-bottom: 36px !important;
-}
-
 .swiper {
   padding-top: 20px !important;
-}
-
-.swiper-slide {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  padding: 40px 0 !important;  /* pushes card away from top */
 }
 
 
@@ -555,3 +530,31 @@ background: linear-gradient(
     opacity: 0;
   }
 }
+
+/* ---- FIXED: EVENT CARDS PROPER SPACING ---- */
+
+/* space between subtitle and swiper */
+.section-sub {
+  margin-bottom: 32px !important;
+}
+
+/* swiper container spacing */
+.swiper {
+  padding-top: 16px !important;
+  padding-bottom: 10px !important;
+}
+
+/* correct spacing for slides WITHOUT breaking overlay */
+.swiper-slide {
+  padding-top: 26px !important;
+  padding-bottom: 26px !important;
+}
+
+/* card always centered and not touching top */
+.event-swipe-card {
+  margin-top: 10px;
+}
+
+
+
+

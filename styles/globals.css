@@ -38,10 +38,9 @@ body {
 
 /* ---------------- NAV ---------------- */
 .nav-logo-img {
-  height: 48px;      /* size adjust karo */
-  width: auto;
-  object-fit: contain;
-  display: block;
+  height: 80px;
+  max-height: 80px;
+  filter: drop-shadow(0 0 6px rgba(255,200,150,0.4));
 }
 
 @media (max-width: 480px) {
@@ -136,6 +135,7 @@ background: linear-gradient(
   display:flex;
   align-items:center;
   gap:8px;
+  flex-shrink: 0 !important;
 }
 .logo span {
   font-family:"Playfair Display", serif;

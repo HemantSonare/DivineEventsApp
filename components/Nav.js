@@ -22,9 +22,9 @@ export default function Nav(){
   return (
     <header className={`nav-wrap ${scrolled ? 'nav-elevate' : ''}`}>
       <div className="container nav">
-        <a href="#home" className="logo">
-          <span style={{fontSize:18}}>Divine</span> <span>Events</span>
-        </a>
+      <a href="#home" className="logo">
+        <img src="/logo.png" alt="Divine Events Logo" className="nav-logo-img" />
+      </a>
 
         <nav className="nav-links" aria-label="Main navigation">
           <a href="#home">Home</a>

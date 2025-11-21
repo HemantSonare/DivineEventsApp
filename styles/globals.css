@@ -37,6 +37,19 @@ body {
 .container{max-width:var(--max-width);margin:0 auto;padding:0 20px;}
 
 /* ---------------- NAV ---------------- */
+.nav-logo-img {
+  height: 48px;      /* size adjust karo */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .nav-logo-img {
+    height: 40px;
+  }
+}
+
 .nav-wrap {
   position: sticky;
   top: 0;

@@ -451,6 +451,7 @@ background: linear-gradient(
   border: 1px solid rgba(255, 200, 160, 0.45);
   box-shadow: 0 10px 35px rgba(0,0,0,0.22);
   background: linear-gradient(135deg, #fff7f0, #ffeede);
+  margin-top: 20px;
 }
 
 /* Background Image (with fallback) */
@@ -503,16 +504,16 @@ background: linear-gradient(
 }
 
 .swiper {
-  margin-top: 40px !important;
+  padding-top: 20px !important;
 }
-
 
 .swiper-slide {
-  padding-top: 20px !important;
-  padding-bottom: 30px !important;
   display: flex !important;
   justify-content: center !important;
+  align-items: center !important;
+  padding: 40px 0 !important;  /* pushes card away from top */
 }
+
 
 /* gallery */
 .gallery-slide{ border-radius:12px; overflow:hidden; box-shadow: 0 18px 60px rgba(0,0,0,0.6); }

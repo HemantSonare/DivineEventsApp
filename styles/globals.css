@@ -38,40 +38,45 @@ body {
 
 /* ---------------- NAV ---------------- */
 .nav-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  overflow: hidden; /* IMPORTANT */
+  position: relative; /* REQUIRED for ::before */
   background: linear-gradient(
     135deg,
-    rgba(255, 215, 200, 0.72),
-    rgba(255, 190, 210, 0.72),
-    rgba(255, 225, 180, 0.72)
+    rgba(255, 215, 200, 0.65),
+    rgba(255, 190, 210, 0.65),
+    rgba(255, 225, 180, 0.65)
   );
-  backdrop-filter: blur(18px) saturate(140%);
-  border-bottom: 1px solid rgba(255, 190, 150, 0.35);
+  backdrop-filter: blur(16px) saturate(160%);
+  border-bottom: 1px solid rgba(255, 200, 160, 0.4);
   transition: all 240ms ease;
-
-  overflow: hidden;
 }
+
 
 .nav-wrap::before {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 1; /* IMPORTANT: must be ABOVE background but BELOW content */
+  z-index: 1; /* ABOVE background - BELOW text */
 
   background: linear-gradient(
     120deg,
     transparent 0%,
-    rgba(255,255,255,0.15) 45%,
-    rgba(255,255,255,0.25) 50%,
-    rgba(255,255,255,0.15) 55%,
+    rgba(255,255,255,0.18) 45%,
+    rgba(255,255,255,0.28) 50%,
+    rgba(255,255,255,0.18) 55%,
     transparent 100%
   );
 
-  transform: translateX(-120%);
+  transform: translateX(-140%);
   opacity: 0;
 
-  pointer-events: none;
   animation: chromeShine 4s ease-in-out infinite;
+  pointer-events: none;
 }
+
 
 .nav-wrap.nav-elevate {
   background: linear-gradient(

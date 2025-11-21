@@ -47,8 +47,31 @@ body {
   backdrop-filter: blur(18px) saturate(140%);
   border-bottom: 1px solid rgba(255, 190, 150, 0.35);
   transition: all 240ms ease;
+
+  overflow: hidden;
 }
 
+.nav-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1; /* IMPORTANT: must be ABOVE background but BELOW content */
+
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255,255,255,0.15) 45%,
+    rgba(255,255,255,0.25) 50%,
+    rgba(255,255,255,0.15) 55%,
+    transparent 100%
+  );
+
+  transform: translateX(-120%);
+  opacity: 0;
+
+  pointer-events: none;
+  animation: chromeShine 4s ease-in-out infinite;
+}
 
 .nav-wrap.nav-elevate {
   background: linear-gradient(
@@ -57,9 +80,17 @@ body {
     rgba(255, 180, 190, 0.94),
     rgba(255, 225, 160, 0.94)
   );
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(22px) saturate(160%);
   border-bottom: 1px solid rgba(255, 200, 160, 0.55);
+
+  /* ⭐ METALLIC DEPTH SHADOW ⭐ */
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.18),                  /* base soft shadow */
+    0 12px 45px rgba(255, 200, 160, 0.35),        /* warm gold glow */
+    0 22px 70px rgba(255, 170, 120, 0.25),        /* metallic depth */
+    inset 0 -2px 6px rgba(255,255,255,0.18);      /* glossy highlight */
 }
+
 
 
 /* navigation layout */
@@ -272,3 +303,27 @@ body {
   .hero{ min-height:86vh; padding:96px 0; }
   .brand{ font-size:56px; }
 }
+
+@keyframes chromeShine {
+  0% {
+    transform: translateX(-140%);
+    opacity: 0;
+  }
+  30% {
+    transform: translateX(-80%);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateX(40%);
+    opacity: 0.30;
+  }
+  70% {
+    transform: translateX(120%);
+    opacity: 0.15;
+  }
+  100% {
+    transform: translateX(160%);
+    opacity: 0;
+  }
+}
+

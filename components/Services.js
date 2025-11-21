@@ -6,15 +6,15 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 
 const events = [
-  { title: "Haldi Ceremony", subtitle: "Vibrant yellow celebration", img: "/images/events/haldi.jpeg" },
-  { title: "Mehndi Event", subtitle: "Traditional artistic beauty", img: "/images/events/mehndi.jpeg" },
-  { title: "Birthday Party", subtitle: "Joy-filled memorable moments", img: "/images/events/birthday.jpeg" },
-  { title: "Baby Shower", subtitle: "Blessings & celebrations", img: "/images/events/babyshower.jpeg" },
-  { title: "Baby Welcome", subtitle: "Welcoming your little angel", img: "/images/events/babywelcome.jpeg" },
-  { title: "Marriage Event", subtitle: "Elegant wedding arrangements", img: "/images/events/marriage.jpeg" },
-  { title: "Pooja Ceremony", subtitle: "Divine traditional rituals", img: "/images/events/pooja.jpeg" },
-  { title: "Inauguration Event", subtitle: "Opening with prosperity", img: "/images/events/inauguration.jpeg" },
-  { title: "Anniversary Party", subtitle: "Celebrating pure love", img: "/images/events/anniversary.jpeg" },
+  { title: "Haldi Ceremony", subtitle: "Bright and joyful yellow-themed décor", img: "/images/events/haldi.jpeg" },
+  { title: "Mehndi Function", subtitle: "Colourful, vibrant setup for your mehndi day", img: "/images/events/mehndi.jpeg" },
+  { title: "Birthday Celebration", subtitle: "Beautiful décor to make birthdays memorable", img: "/images/events/birthday.jpeg" },
+  { title: "Baby Shower", subtitle: "Soft and pretty themes for welcoming motherhood", img: "/images/events/babyshower.jpeg" },
+  { title: "Baby Welcome", subtitle: "Warm and lovely décor to welcome your newborn", img: "/images/events/babywelcome.jpeg" },
+  { title: "Wedding Event", subtitle: "Elegant arrangements for your big day", img: "/images/events/marriage.jpeg" },
+  { title: "Pooja Ceremony", subtitle: "Pure and peaceful décor for rituals", img: "/images/events/pooja.jpeg" },
+  { title: "Inauguration Event", subtitle: "Simple and premium setups for openings", img: "/images/events/inauguration.jpeg" },
+  { title: "Anniversary Celebration", subtitle: "Romantic décor to celebrate your journey", img: "/images/events/anniversary.jpeg" },
 ];
 
 export default function Services() {
@@ -23,8 +23,11 @@ export default function Services() {
     <section id="services" className="section">
       <div className="container">
 
+        {/* ⭐ UPDATED SECTION TITLE & SUBTEXT ⭐ */}
         <h2 className="section-title">Our Event Expertise</h2>
-        <p className="section-sub">We curate luxury experiences for every occasion.</p>
+        <p className="section-sub">
+          We design beautiful and premium setups for every special moment.
+        </p>
 
         <Swiper
           modules={[Pagination]}
@@ -37,12 +40,14 @@ export default function Services() {
           {events.map((event, index) => (
             <SwiperSlide key={index}>
               <div className="event-swipe-card">
-                
+
                 {/* IMAGE BACKGROUND */}
                 <div
                   className="event-img"
                   style={{
-                    backgroundImage: event.img ? `url(${event.img})` : "none"
+                    backgroundImage: event.img
+                      ? `url(${event.img})`
+                      : "none"
                   }}
                 />
 

@@ -320,4 +320,26 @@ body {
   color: #2E110B !important;
 }
 
+/* === FIX: HERO “Our Services” LINK SHOULD BE WHITE === */
+.hero-content a {
+  color: #ffffff !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hero-content a:hover {
+  color: #f3d7c4 !important;
+}
+
+/* === FIX: NAVBAR SPACING RESTORE === */
+.nav-links {
+  gap: 48px !important;
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    gap: 24px !important;
+  }
+}
+
 /* END OF FILE */

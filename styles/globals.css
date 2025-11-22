@@ -1020,4 +1020,15 @@ background: linear-gradient(
   transform: translateY(20px); /* safe push */
 }
 
+/* FIX mobile gallery image overflow */
+@media (max-width: 768px) {
+  .gallery-tile-3d {
+    overflow: hidden !important;   /* keeps zoomed image inside */
+    border-radius: 14px !important;
+  }
+
+  .gallery-tile-3d img {
+    border-radius: inherit !important;
+  }
+}
 

@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 
 const gallerySets = [
-  ["/images/gallery/g1.jpeg", "/images/gallery/g2.jpeg", "/images/gallery/g3.jpeg"],
+  ["/images/gallery/g1.jpeg", "/images/gallery/g10.jpeg", "/images/gallery/g11.jpeg"],
+  ["/images/gallery/g12.jpeg", "/images/gallery/g13.jpeg", "/images/gallery/g14.jpeg"],
+  ["/images/gallery/g15.jpeg", "/images/gallery/g16.jpeg", "/images/gallery/g17.jpeg"],
+  ["/images/gallery/g18.jpeg", "/images/gallery/g2.jpeg", "/images/gallery/g3.jpeg"],
   ["/images/gallery/g4.jpeg", "/images/gallery/g5.jpeg", "/images/gallery/g6.jpeg"],
   ["/images/gallery/g7.jpeg", "/images/gallery/g8.jpeg", "/images/gallery/g9.jpeg"],
-  ["/images/gallery/g10.jpeg", "/images/gallery/g11.jpeg", "/images/gallery/g12.jpeg"],
-  ["/images/gallery/g13.jpeg", "/images/gallery/g14.jpeg", "/images/gallery/g15.jpeg"],
-  ["/images/gallery/g16.jpeg", "/images/gallery/g17.jpeg", "/images/gallery/g18.jpeg"],
 ];
+
 
 export default function PremiumGallery() {
   const [indexes, setIndexes] = useState(gallerySets.map(() => 0));

@@ -802,71 +802,6 @@ background: linear-gradient(
   }
 }
 
-/* PREMIUM CROSSFADE EFFECT */
-.gallery-tile-3d {
-  position: relative;
-  overflow: hidden;
-  border-radius: 18px;
-  aspect-ratio: 1/1; 
-  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
-}
-
-.gallery-tile-3d img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-  position: absolute;
-  left: 0;
-  top: 0;
-
-  opacity: 0;
-  transition: opacity 0.85s ease-in-out, transform 0.8s ease;
-  transform: scale(1.03);
-}
-
-.gallery-tile-3d img.active {
-  opacity: 1;
-  transform: scale(1); /* smooth zoom-in effect */
-}
-
-/* SUBTLE GOLD SHIMMER */
-.gallery-tile-3d .shine {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,220,160,0.15),
-    transparent
-  );
-  transform: translateX(-120%);
-  animation: shimmer 6s infinite ease-in-out;
-  opacity: 0.25;
-}
-
-.gallery-tile-3d img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-  opacity: 0;
-  transform: translateY(20px) scale(1.06);
-  transition: 
-    opacity 1.2s ease-in-out,
-    transform 2.2s ease;
-}
-
-.gallery-tile-3d img.active {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  animation: slowFloat 8s ease-in-out infinite;
-}
-
-
 @keyframes slowFloat {
   0% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-6px) scale(1.03); }
@@ -882,3 +817,142 @@ background: linear-gradient(
   100% { transform: translateX(-120%); }
 }
 
+/* ================== ULTIMATE LUXURY GALLERY (Mixed E) ================== */
+
+/* container + particle overlay */
+.gallery-section { position: relative; padding-top: 44px; padding-bottom: 44px; }
+.gallery-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  /* using uploaded rose-gold particle sprite (local upload path) */
+  background-image: url('/mnt/data/A_logo_for_"Divine_Events"_features_rose_gold_meta.png');
+  background-repeat: repeat;
+  background-size: 110px 110px;
+  opacity: 0.06;
+  mix-blend-mode: screen;
+  filter: blur(4px) saturate(120%);
+}
+
+/* grid responsive */
+.gallery-grid-3d {
+  position: relative;
+  z-index: 2; /* above particles */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+/* tile base */
+.gallery-tile-3d {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  height: 260px;
+  background: linear-gradient(180deg, rgba(255,248,244,0.6), rgba(255,238,228,0.4));
+  border: 1px solid rgba(255,210,180,0.28);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.18),
+    0 18px 48px rgba(255,180,140,0.06) inset;
+  transform-style: preserve-3d;
+  transition: transform 600ms cubic-bezier(.2,.9,.2,1), box-shadow 400ms ease;
+  will-change: transform;
+}
+
+/* slightly elevate on hover (desktop) */
+@media (hover:hover) {
+  .gallery-tile-3d:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow:
+      0 22px 60px rgba(0,0,0,0.32),
+      0 30px 90px rgba(255,170,120,0.22);
+  }
+}
+
+/* stacked images — crossfade + Ken Burns pan (diagonal) */
+.gallery-tile-3d img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  opacity: 0;
+  transform: translate3d(18px, 24px, 0) scale(1.06); /* start slightly down-right + zoom */
+  transition:
+    opacity 1.1s cubic-bezier(.2,.9,.2,1),
+    transform 2.4s cubic-bezier(.2,.9,.2,1);
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+}
+
+/* active image: fade in + glide to center + gentle float */
+.gallery-tile-3d img.active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  animation: tileFloat 9s ease-in-out infinite;
+}
+
+/* very slow ken-burns micro-pan (applies to active only) */
+@keyframes tileFloat {
+  0%   { transform: translate3d(0,0,0) scale(1); }
+  35%  { transform: translate3d(-6px,-4px,0) scale(1.02); }
+  70%  { transform: translate3d(6px,-10px,0) scale(1.03); }
+  100% { transform: translate3d(0,0,0) scale(1); }
+}
+
+/* gold shimmer overlay (subtle) */
+.gallery-tile-3d .shine {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(120deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,245,220,0.14) 30%,
+    rgba(255,245,220,0.08) 50%,
+    rgba(255,255,255,0) 70%);
+  transform: translateX(-140%);
+  transition: transform 1.6s ease;
+  mix-blend-mode: screen;
+  opacity: 0.6;
+}
+.gallery-tile-3d:hover .shine { transform: translateX(160%); }
+
+/* tile vignette for depth */
+.tile-vignette {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,0.28) 100%);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+/* ambient rose-gold bloom behind each tile */
+.gallery-tile-3d::before {
+  content: "";
+  position: absolute;
+  inset: -14%;
+  z-index: -1;
+  background: radial-gradient(circle at 50% 20%, rgba(255,220,180,0.12), transparent 35%);
+  filter: blur(18px);
+  opacity: 0.9;
+  transition: opacity 300ms ease;
+}
+
+/* responsive */
+@media (max-width: 980px) {
+  .gallery-grid-3d { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .gallery-tile-3d { height: 190px; }
+  .gallery-particles { background-size: 80px 80px; opacity: 0.045; }
+}
+@media (max-width: 520px) {
+  .gallery-grid-3d { grid-template-columns: 1fr; gap: 12px; }
+  .gallery-tile-3d { height: 160px; border-radius: 12px; }
+  .gallery-particles { display: none; } /* keep mobile clean */
+}
+
+/* subtle overall easing (makes every animation feel premium) */
+* { transition-timing-function: cubic-bezier(.2,.9,.2,1) !important; }

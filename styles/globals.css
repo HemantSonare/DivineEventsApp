@@ -484,4 +484,33 @@ body {
   overflow: hidden !important;
 }
 
+/* === FIX: PERFECT LOGO FIT IN NAVBAR === */
+
+.nav-logo-img {
+  height: 70px !important;       /* fits inside nav height */
+  object-fit: contain !important;
+  display: block;
+}
+
+/* ensure logo is centered inside navbar */
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%; 
+}
+
+/* desktop: slightly larger but still aligned */
+@media (min-width: 700px) {
+  .nav-logo-img {
+    height: 80px !important;
+  }
+}
+
+/* mobile alignment fix */
+@media (max-width: 600px) {
+  .nav-logo-img {
+    height: 64px !important;    /* perfect fit */
+  }
+}
+
 /* END OF FILE */

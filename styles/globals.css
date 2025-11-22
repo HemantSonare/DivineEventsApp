@@ -487,7 +487,12 @@ background: linear-gradient(
   height: 100%;
   background-size: cover;
   background-position: center;
-  transition: transform 1.6s ease;
+  transform: scale(1);
+  transition: transform 4s ease;
+}
+
+.swiper-slide-active .event-img {
+  transform: scale(1.12); /* slow zoom */
 }
 
 .event-swipe-card:hover .event-img {
@@ -495,12 +500,14 @@ background: linear-gradient(
 }
 
 .event-overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 26px;
-  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.55));
-  color: white;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: 1.4s ease;
+}
+
+.swiper-slide-active .event-overlay {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
@@ -708,10 +715,8 @@ background: linear-gradient(
   padding-bottom: 10px !important;
 }
 
-/* correct spacing for slides WITHOUT breaking overlay */
 .swiper-slide {
-  padding-top: 26px !important;
-  padding-bottom: 26px !important;
+  transition: opacity 1.2s ease !important;
 }
 
 /* card always centered and not touching top */

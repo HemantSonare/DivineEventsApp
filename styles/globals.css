@@ -358,39 +358,45 @@ body {
 }
 
 /* --- SAME SHAPE FOR BOTH BUTTONS (GLOBAL FIX) --- */
+
+.hero-ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 .hero-ctas .btn-gold,
 .hero-ctas .btn-glass {
-  padding: 12px 28px !important;
-  border-radius: 26px !important;
-  font-size: 16px !important;
-  font-weight: 600 !important;
-  height: 48px !important;          /* SAME HEIGHT */
-  min-width: 165px !important;       /* SAME WIDTH FEEL */
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
+  width: 165px;        /* exact equal width */
+  padding: 14px 22px;  /* balanced padding */
+  border-radius: 20px; /* same shape for both */
 }
 
-/* CHAT BUTTON (KEEP ORIGINAL COLOR — ONLY SHAPE FIXED) */
+/* === PEACH BUTTON (CHAT) === */
 .hero-ctas .btn-gold {
-  background: linear-gradient(135deg, #f6d9c2, #ecc4b0) !important;
-  color: #4C1F10 !important;
-  border: none !important;
+  background: linear-gradient(135deg, #F8DAC8, #F3C9B4);
+  color: #4C1F10;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
 }
 
-/* OUR SERVICES (GLASS BUTTON) */
+.hero-ctas .btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(0,0,0,0.22);
+}
+
+/* === GLASS BUTTON (SERVICES) === */
 .hero-ctas .btn-glass {
-  background: rgba(255,255,255,0.22) !important;
-  border: 1px solid rgba(255,255,255,0.55) !important;
-  backdrop-filter: blur(12px) !important;
-  color: white !important;
+  background: rgba(255, 255, 255, 0.32);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  color: #ffffff;
 }
 
-/* Spacing between the two buttons */
-.hero-ctas {
-  display: flex !important;
-  gap: 14px !important;
-  margin-top: 22px !important;
+.hero-ctas .btn-glass:hover {
+  background: rgba(255, 255, 255, 0.45);
+  transform: translateY(-2px);
 }
 
 

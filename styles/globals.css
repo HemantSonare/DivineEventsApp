@@ -1020,15 +1020,24 @@ background: linear-gradient(
   transform: translateY(20px); /* safe push */
 }
 
-/* FIX mobile gallery image overflow */
+/* --------- FIX: Prevent gallery image overflow on mobile --------- */
 @media (max-width: 768px) {
   .gallery-tile-3d {
-    overflow: hidden !important;   /* keeps zoomed image inside */
-    border-radius: 14px !important;
+    overflow: hidden !important;
+    border-radius: 16px !important;
   }
 
   .gallery-tile-3d img {
-    border-radius: inherit !important;
+    transform: scale(1.06) !important;   /* smaller zoom */
+  }
+
+  .gallery-tile-3d:hover img {
+    transform: scale(1.09) !important;   /* still gives premium effect */
+  }
+
+  .gallery-tile-3d img.active {
+    animation: none !important;  /* disables floating drift causing overflow */
   }
 }
+
 

@@ -417,5 +417,173 @@ body {
   transform: translateY(-2px);
 }
 
+/* ===================== PREMIUM NAVBAR FIX ===================== */
+
+/* Better spacing + premium layout */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 14px;
+  height: 72px;
+}
+
+/* Logo area always visible + spacing */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+/* NAV LINKS WRAP FIX */
+.nav-links {
+  display: flex;
+  gap: 18px;
+  white-space: nowrap;
+  flex-wrap: wrap;
+}
+
+/* Premium text style */
+.nav-links a {
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 4px 6px;
+  color: #4C1F10;
+}
+
+/* Underline gold premium effect */
+.nav-links a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #FFD9A0, #FFBC9A);
+  margin-top: 3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  transform: scaleX(1);
+}
+
+/* ===================== MOBILE FIX ===================== */
+@media (max-width: 768px) {
+
+  .nav {
+    padding: 4px 10px;
+    height: 70px;
+  }
+
+  .nav-wrap {
+    height: 72px !important;
+  }
+
+  .nav-logo-img {
+    height: 62px !important;
+  }
+
+  /* Wrap nav items neatly */
+  .nav-links {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+    padding: 4px 6px;
+  }
+}
+
+/* ===================== PREMIUM NAVBAR FIX ===================== */
+
+/* Better spacing + premium layout */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 14px;
+  height: 72px;
+}
+
+/* Logo area always visible + spacing */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+/* NAV LINKS WRAP FIX */
+.nav-links {
+  display: flex;
+  gap: 18px;
+  white-space: nowrap;
+  flex-wrap: wrap;
+}
+
+/* Premium text style */
+.nav-links a {
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 4px 6px;
+  color: #4C1F10;
+}
+
+/* Underline gold premium effect */
+.nav-links a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #FFD9A0, #FFBC9A);
+  margin-top: 3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  transform: scaleX(1);
+}
+
+/* ===================== MOBILE FIX ===================== */
+@media (max-width: 768px) {
+
+  .nav {
+    padding: 4px 10px;
+    height: 70px;
+  }
+
+  .nav-wrap {
+    height: 72px !important;
+  }
+
+  .nav-logo-img {
+    height: 62px !important;
+  }
+
+  /* Wrap nav items neatly */
+  .nav-links {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+    padding: 4px 6px;
+  }
+}
+
 
 /* END OF FILE */

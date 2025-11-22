@@ -569,4 +569,26 @@ body {
     0 0 0 rgba(255,255,255,0.3);
 }
 
+/* === BIG LUXURY LOGO – FULL NAV HEIGHT === */
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 4px; /* clean alignment on left */
+}
+
+.nav-logo-img {
+  height: 92px !important;      /* bigger logo */
+  width: auto !important;
+  object-fit: contain !important;
+  padding: 6px 0 !important;    /* aligns it perfectly vertically */
+  display: block;
+}
+
+/* Mobile version */
+@media (max-width: 600px) {
+  .nav-logo-img {
+    height: 86px !important;   /* slightly smaller for phones */
+  }
+}
 /* END OF FILE */

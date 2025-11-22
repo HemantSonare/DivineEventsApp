@@ -1020,23 +1020,26 @@ background: linear-gradient(
   transform: translateY(20px); /* safe push */
 }
 
-/* --------- FIX: Prevent gallery image overflow on mobile --------- */
+/* FINAL FIX — Prevent gallery image overflow on mobile only */
 @media (max-width: 768px) {
+
+  /* FORCE clipping */
   .gallery-tile-3d {
     overflow: hidden !important;
     border-radius: 16px !important;
+    position: relative;
   }
 
+  /* restore gentle animation */
   .gallery-tile-3d img {
-    transform: scale(1.06) !important;   /* smaller zoom */
-  }
-
-  .gallery-tile-3d:hover img {
-    transform: scale(1.09) !important;   /* still gives premium effect */
+    border-radius: inherit;          /* match container */
+    clip-path: inset(0 round 16px);  /* HARD force rounded corners */
+    transform: translate3d(0,0,0) scale(1.06) !important;
   }
 
   .gallery-tile-3d img.active {
-    animation: none !important;  /* disables floating drift causing overflow */
+    opacity: 1;
+    animation: tileFloat 9s ease-in-out infinite !important;
   }
 }
 

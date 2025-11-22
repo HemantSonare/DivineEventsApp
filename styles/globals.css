@@ -609,4 +609,68 @@ body {
   padding: 0 !important;
   margin: 0 !important;
 }
+
+
+
+/* ====== LOGO: stretch to full nav height (add at EOF of globals.css) ====== */
+
+/* prefer explicit nav height but fall back to current */
+:root {
+  --nav-height: 74px; /* tweak if you want taller nav globally (desktop) */
+}
+
+/* use same height for nav (safe override) */
+.nav {
+  height: var(--nav-height) !important;
+  align-items: center; /* keep links vertically centered */
+}
+
+/* make the inner nav row stretch and keep alignment */
+.nav-wrap .nav {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  align-items: stretch; /* allow logo container to take full height */
+}
+
+/* logo container: remove vertical padding and let it match nav height */
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;        /* match nav height */
+  padding: 0 12px;     /* horizontal spacing only */
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* the image itself fills the container height (keeps aspect ratio) */
+.logo img.nav-logo-img {
+  height: 100% !important;    /* fill nav height */
+  width: auto !important;     /* keep aspect ratio */
+  max-height: none !important;
+  display: block;
+  object-fit: contain;
+  -webkit-transform: translateZ(0); /* help compositing on mobile */
+}
+
+/* small tweak so logo touches the very top/bottom visually on small nav gutters */
+.nav-wrap {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Mobile: slightly reduce nav height but keep same behavior */
+@media (max-width: 600px) {
+  :root { --nav-height: 70px; }
+  .nav { height: var(--nav-height) !important; }
+  .nav-logo-img { height: 100% !important; }
+}
+
+/* If you need the logo to be EXACTLY square (nav-height x nav-height) uncomment below */
+
+.logo img.nav-logo-img {
+  width: var(--nav-height) !important;
+  height: var(--nav-height) !important;
+}
+
 /* END OF FILE */

@@ -591,4 +591,22 @@ body {
     height: 86px !important;   /* slightly smaller for phones */
   }
 }
+
+/* === LOGO SHOULD FULLY MATCH NAVBAR HEIGHT === */
+
+/* Force nav height */
+.nav {
+  height: 82px !important; /* Your current navbar height */
+  align-items: center;
+}
+
+/* Make the logo stretch exactly from top to bottom */
+.nav-logo-img {
+  height: 100% !important;   /* match nav height perfectly */
+  width: auto !important;
+  object-fit: contain !important;
+  display: block;
+  padding: 0 !important;
+  margin: 0 !important;
+}
 /* END OF FILE */

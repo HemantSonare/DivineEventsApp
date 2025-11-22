@@ -52,11 +52,19 @@ body {
 .nav { display:flex; align-items:center; justify-content:space-between; gap:16px; height:72px; padding:0 6px; }
 .logo { display:flex; align-items:center; gap:8px; text-decoration:none; flex-shrink:0; }
 .logo img.nav-logo-img { height:56px; filter: drop-shadow(0 0 6px rgba(255,200,150,0.4)); }
-.nav-links { display:flex; gap:22px; align-items:center; }
-.nav-links a {
-  font-family: "Playfair Display", serif; font-size:18px; font-weight:500;
-  color: #4C1F10; padding:6px 10px; text-decoration:none; transition: color .25s ease;
+/* --- FIX NAV SPACING (PERFECT PREMIUM) --- */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px !important;   /* reduced spacing */
+  white-space: nowrap;
 }
+
+.nav-links a {
+  padding: 6px 10px !important;
+  font-size: 18px !important;
+}
+
 .nav-links a:hover { color:#2E110B; }
 
 /* gold underline */

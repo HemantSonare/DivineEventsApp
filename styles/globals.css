@@ -528,4 +528,45 @@ body {
   text-transform: none !important;  /* keep lowercase */
   color: #3C1B12 !important; /* deeper premium shade */
 }
+
+/* === LUXURY CONTACT FORM BUTTONS (MATCH HERO STYLE) === */
+
+.form-buttons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.form-buttons button {
+  flex: 1;
+  min-width: 150px;
+  padding: 14px 22px;
+  border-radius: 20px;
+
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+
+  /* premium gradient same as hero peach button */
+  background: linear-gradient(135deg, #F8DAC8, #F3C9B4);
+  color: #4C1F10;
+  border: none;
+
+  box-shadow: 
+    0 4px 14px rgba(0,0,0,0.15),
+    0 0 0 rgba(255,255,255,0);
+}
+
+.form-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 18px rgba(0,0,0,0.22),
+    0 0 0 rgba(255,255,255,0.3);
+}
+
 /* END OF FILE */

@@ -256,4 +256,33 @@ body {
 /* subtle easing baseline */
 * { transition-timing-function: cubic-bezier(.2,.9,.2,1) !important; }
 
+/* FIX — Center logo properly inside navbar */
+.nav {
+  align-items: center !important;
+}
+
+.nav-logo-img {
+  height: 60px !important;
+  max-height: 60px !important;
+  object-fit: contain;
+}
+
+/* FIX — Premium styling for "Our Services" hero link */
+.hero-cta-link {
+  color: #4C1F10 !important;
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+  margin-left: 12px;
+  text-decoration: none !important;
+  border-bottom: 2px solid #FFD9A0;
+  padding-bottom: 2px;
+  transition: 0.3s ease;
+}
+
+.hero-cta-link:hover {
+  color: #2E110B !important;
+  border-bottom-color: #FFBFAF;
+}
+
+
 /* END OF FILE */

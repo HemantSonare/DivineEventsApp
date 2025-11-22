@@ -357,88 +357,42 @@ body {
   white-space: nowrap;   /* prevents wrapping */
 }
 
-/* --- FIX HERO CTA SPACING --- */
-.hero-ctas {
-  display: flex;
-  align-items: center;
-  gap: 22px !important;   /* EXACT like before */
-  margin-top: 24px !important;
-}
-
-/* UNIFORM BUTTONS IN HERO */
+/* SHARED BUTTON STYLE — SAME SHAPE FOR BOTH */
 .hero-ctas a,
 .hero-ctas button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-
-  padding: 14px 22px;
-  min-width: 150px;
-  border-radius: 50px;
-
-  height: 48px;               /* SAME BUTTON HEIGHT */
-  white-space: nowrap;        /* prevent wrapping */
+    padding: 12px 26px !important;
+    border-radius: 26px !important; /* SAME RADIUS */
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    height: 48px !important; /* SAME HEIGHT */
+    min-width: 170px !important; /* SAME WIDTH LOOK */
+    text-align: center;
 }
 
-
-/* --- MAKE "OUR SERVICES" WHITE + CLEAN --- */
-.hero-ctas a:last-child {
-  color: white !important;
-  text-decoration: none !important;
-  padding: 8px 14px;
-  border-radius: 12px;
-  background: rgba(255,255,255,0.18);
-  backdrop-filter: blur(6px);
+/* CHAT BUTTON (PEACH COLOR) */
+.btn-peach {
+    background: linear-gradient(135deg, #f9d3c1, #f7c6b2) !important;
+    border: none !important;
+    color: #4C1F10 !important;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15) !important;
 }
 
-/* RESTORE OUR SERVICES BUTTON STYLE */
-.hero-ctas a {
-  color: #ffffff !important;
-  border: 2px solid rgba(255,255,255,0.7);
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(4px);
-  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+/* OUR SERVICES BUTTON (GLASS STYLE) */
+.btn-glass {
+    background: rgba(255,255,255,0.22) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255,255,255,0.55) !important;
+    color: #ffffff !important;
 }
 
-.hero-ctas a:hover {
-  background: rgba(255,255,255,0.25);
-  transform: translateY(-2px);
+/* SPACING BETWEEN BUTTONS */
+.hero-ctas {
+    display: flex !important;
+    gap: 14px !important;
+    margin-top: 22px !important;
 }
-
-/* ==== MAKE BOTH HERO BUTTONS SAME SIZE & SHAPE (NO COLOR CHANGE) ==== */
-
-.hero-ctas button,
-.hero-ctas a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;           /* SAME HEIGHT */
-  padding: 0 26px;        /* SAME WIDTH FEEL */
-  border-radius: 22px;    /* SAME ROUNDNESS */
-  font-size: 17px;
-  font-weight: 600;
-  line-height: 1;
-}
-
-/* Keep peach button color exactly SAME */
-.hero-ctas button {
-  background: linear-gradient(135deg, #f6d9c2, #ecc4b0) !important;
-  color: #4C1F10 !important;
-  border: none !important;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
-}
-
-/* Keep "Our Services" glass look EXACTLY SAME */
-.hero-ctas a {
-  background: rgba(255,255,255,0.22) !important;
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.55) !important;
-  color: #ffffff !important;
-}
-
 
 /* END OF FILE */

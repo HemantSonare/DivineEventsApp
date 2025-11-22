@@ -827,7 +827,7 @@ background: linear-gradient(
   pointer-events: none;
   z-index: 1;
   /* using uploaded rose-gold particle sprite (local upload path) */
-  background-image: url('/mnt/data/A_logo_for_"Divine_Events"_features_rose_gold_meta.png');
+  background-image: url('/logo-particle.png');
   background-repeat: repeat;
   background-size: 110px 110px;
   opacity: 0.06;

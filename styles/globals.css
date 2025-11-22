@@ -978,3 +978,29 @@ background: linear-gradient(
 
 /* subtle overall easing (makes every animation feel premium) */
 * { transition-timing-function: cubic-bezier(.2,.9,.2,1) !important; }
+
+/* ======== FIX: EVENT OVERLAY TEXT NOT SHOWING ======== */
+
+.event-overlay {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  bottom: 0;
+  position: absolute;
+  padding: 20px;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0),
+    rgba(0,0,0,0.55)
+  ) !important;
+}
+
+.event-overlay h3,
+.event-overlay p {
+  color: #fff !important;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+
+.swiper-slide-active .event-overlay {
+  opacity: 1 !important;
+}

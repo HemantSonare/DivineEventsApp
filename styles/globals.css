@@ -144,4 +144,14 @@ body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helve
 /* tidy responsive defaults */
 @media(min-width:768px){.nav-links{display:flex}.cards-grid{grid-template-columns:repeat(3,1fr)}.contact-grid{grid-template-columns:1.6fr 1fr}.hero{min-height:86vh;padding:96px 0}.brand{font-size:56px}}
 
+/* RESTORE PREMIUM NAV LINK STYLE */
+.nav-links a {
+  color: #4C1F10 !important;
+  font-family: 'Playfair Display', serif !important;
+}
+
+.nav-links a::after {
+  background: linear-gradient(90deg, var(--gold-1), var(--gold-2)) !important;
+}
+
 /* End of cleaned CSS */

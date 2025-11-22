@@ -541,8 +541,6 @@ background: linear-gradient(
 
 
 /* gallery */
-.gallery-slide{ border-radius:12px; overflow:hidden; box-shadow: 0 18px 60px rgba(0,0,0,0.6); }
-.gallery-slide img{ width:100%; height:240px; object-fit:cover; }
 
 /* contact grid */
 .contact-grid{ display:grid; grid-template-columns:1fr; gap:18px; }
@@ -1020,27 +1018,17 @@ background: linear-gradient(
   transform: translateY(20px); /* safe push */
 }
 
-/* FINAL FIX — Prevent gallery image overflow on mobile only */
-@media (max-width: 768px) {
-
-  /* FORCE clipping */
-  .gallery-tile-3d {
-    overflow: hidden !important;
-    border-radius: 16px !important;
-    position: relative;
-  }
-
-  /* restore gentle animation */
-  .gallery-tile-3d img {
-    border-radius: inherit;          /* match container */
-    clip-path: inset(0 round 16px);  /* HARD force rounded corners */
-    transform: translate3d(0,0,0) scale(1.06) !important;
-  }
-
-  .gallery-tile-3d img.active {
-    opacity: 1;
-    animation: tileFloat 9s ease-in-out infinite !important;
-  }
+/* FIX: Gallery images overflowing on mobile */
+.gallery-tile-3d,
+.gallery-tile-3d img {
+  border-radius: 16px !important;
+  overflow: hidden !important;
 }
+
+/* Prevent image from exceeding tile */
+.gallery-tile-3d img {
+  clip-path: inset(0 round 16px);
+}
+
 
 

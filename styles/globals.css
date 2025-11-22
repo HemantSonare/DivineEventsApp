@@ -331,10 +331,12 @@ body {
   color: #f3d7c4 !important;
 }
 
-/* === FIX: NAVBAR SPACING RESTORE === */
-.nav-links {
-  gap: 48px !important;
+/* FIX NAV SPACING & CONTACT OVERFLOW */
+.nav-links a {
+  font-size: 17px !important;     /* slightly smaller */
+  padding: 6px 12px !important;   /* restore spacing */
 }
+
 
 @media (max-width: 600px) {
   .nav-links {
@@ -363,10 +365,25 @@ body {
   margin-top: 24px !important;
 }
 
-.hero-ctas a {
-  font-size: 17px !important;
-  font-weight: 600 !important;
+/* UNIFORM BUTTONS IN HERO */
+.hero-ctas a,
+.hero-ctas button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+
+  padding: 14px 22px;
+  min-width: 150px;
+  border-radius: 50px;
+
+  height: 48px;               /* SAME BUTTON HEIGHT */
+  white-space: nowrap;        /* prevent wrapping */
 }
+
 
 /* --- MAKE "OUR SERVICES" WHITE + CLEAN --- */
 .hero-ctas a:last-child {
@@ -377,5 +394,20 @@ body {
   background: rgba(255,255,255,0.18);
   backdrop-filter: blur(6px);
 }
+
+/* RESTORE OUR SERVICES BUTTON STYLE */
+.hero-ctas a {
+  color: #ffffff !important;
+  border: 2px solid rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.hero-ctas a:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-2px);
+}
+
 
 /* END OF FILE */

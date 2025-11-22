@@ -457,13 +457,19 @@ background: linear-gradient(
 
 .event-swipe-card {
   position: relative;
-  height: 290px;
-  border-radius: 18px;
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* ⭐ Makes the card perfect square */
+  border-radius: 22px;
   overflow: hidden;
   border: 1px solid rgba(255, 200, 160, 0.45);
   box-shadow: 0 10px 35px rgba(0,0,0,0.22);
-  background: linear-gradient(135deg, #fff7f0, #ffeede);
-  margin-top: 20px;
+  background: #fff;
+  transition: transform .45s ease, box-shadow .45s ease;
+}
+
+.event-swipe-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 60px rgba(0,0,0,0.35);
 }
 
 /* Background Image (with fallback) */
@@ -472,7 +478,11 @@ background: linear-gradient(
   height: 100%;
   background-size: cover;
   background-position: center;
-  filter: brightness(0.75) saturate(1.05);
+  transition: transform 1.6s ease;
+}
+
+.event-swipe-card:hover .event-img {
+  transform: scale(1.14);
 }
 
 /* TEXT OVERLAY */
@@ -480,22 +490,24 @@ background: linear-gradient(
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 20px;
-  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.55));
+  padding: 26px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(0,0,0,0.55)
+  );
   color: white;
-  text-align: left;
 }
 
 .event-overlay h3 {
-  font-family: "Playfair Display", serif;
   font-size: 22px;
+  font-family: "Playfair Display", serif;
   margin: 0;
-  font-weight: 600;
-  color: #fff;
 }
 
+
 .event-overlay p {
-  margin: 4px 0 0 0;
+  margin: 6px 0 0 0;
   font-size: 14px;
   opacity: 0.9;
 }

@@ -342,4 +342,40 @@ body {
   }
 }
 
+/* --- FIX NAV SPACING & LAST LINK MISSING --- */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 34px !important;   /* bigger spacing like before */
+}
+
+.nav-links a {
+  padding: 6px 12px !important;
+  font-size: 19px !important;
+  white-space: nowrap;   /* prevents wrapping */
+}
+
+/* --- FIX HERO CTA SPACING --- */
+.hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: 22px !important;   /* EXACT like before */
+  margin-top: 24px !important;
+}
+
+.hero-ctas a {
+  font-size: 17px !important;
+  font-weight: 600 !important;
+}
+
+/* --- MAKE "OUR SERVICES" WHITE + CLEAN --- */
+.hero-ctas a:last-child {
+  color: white !important;
+  text-decoration: none !important;
+  padding: 8px 14px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(6px);
+}
+
 /* END OF FILE */

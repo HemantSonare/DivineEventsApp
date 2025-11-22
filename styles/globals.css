@@ -639,5 +639,80 @@ body {
   }
 }
 
+/* ===================== FIX NAVBAR PREMIUM LAYOUT ===================== */
+
+/* Ensure nav stays in a single clean line */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  height: 72px;
+}
+
+/* Logo always stays properly sized */
+.nav-logo-img {
+  height: 66px;
+  width: auto;
+}
+
+/* NAV LINKS – force single-line layout */
+.nav-links {
+  display: flex;
+  flex-wrap: nowrap !important;
+  align-items: center;
+  gap: 22px;          /* equal spacing */
+  white-space: nowrap; /* prevent wrapping on phones */
+}
+
+/* NAV LINKS STYLE (premium) */
+.nav-links a {
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+  color: #4C1F10;
+  text-decoration: none;
+  padding: 4px 6px;
+  font-weight: 500;
+  transition: 0.25s ease-in-out;
+}
+
+/* Underline hover */
+.nav-links a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #FFD9A0, #FFC1A4);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  transform: scaleX(1);
+}
+
+/* ---------------- MOBILE FIX ---------------- */
+@media (max-width: 600px) {
+
+  .nav {
+    height: 70px;
+  }
+
+  /* Shrink font slightly so they all fit perfectly */
+  .nav-links a {
+    font-size: 15px;
+    padding: 3px 5px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  /* Logo smaller on mobile */
+  .nav-logo-img {
+    height: 58px;
+  }
+}
 
 /* END OF FILE */

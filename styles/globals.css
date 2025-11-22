@@ -802,4 +802,53 @@ background: linear-gradient(
   }
 }
 
+/* PREMIUM CROSSFADE EFFECT */
+.gallery-tile-3d {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  aspect-ratio: 1/1; 
+  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+}
+
+.gallery-tile-3d img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  opacity: 0;
+  transition: opacity 0.85s ease-in-out, transform 0.8s ease;
+  transform: scale(1.03);
+}
+
+.gallery-tile-3d img.active {
+  opacity: 1;
+  transform: scale(1); /* smooth zoom-in effect */
+}
+
+/* SUBTLE GOLD SHIMMER */
+.gallery-tile-3d .shine {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,220,160,0.15),
+    transparent
+  );
+  transform: translateX(-120%);
+  animation: shimmer 6s infinite ease-in-out;
+  opacity: 0.25;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-120%); }
+  50% { transform: translateX(160%); }
+  100% { transform: translateX(-120%); }
+}
 

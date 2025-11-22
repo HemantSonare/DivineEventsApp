@@ -731,32 +731,51 @@ section#home,
 }
 
 /* PREMIUM NAV BAR SPACING & LOOK */
+
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 22px !important;
+  gap: 22px;
+  padding: 0 12px;
+
+  height: 82px;                  /* FIX: more height so links fit */
+  overflow: visible;             /* FIX: prevent clipping */
+  position: relative;
 }
 
 .nav-links {
   display: flex;
-  gap: 36px !important;   /* Even spacing */
+  align-items: center;
+  gap: 28px;                      /* spacing between Home Services Gallery Contact */
+  white-space: nowrap;            /* FIX: prevent breaking into two lines */
 }
 
 .nav-links a {
+  font-family: 'Playfair Display', serif;
   font-size: 18px;
   font-weight: 500;
-  color: #3e2b22;
+  color: #4C1F10;
+  text-decoration: none;
 }
 
-/* mobile safe */
-@media (max-width: 480px) {
-  .nav-links {
-    gap: 20px !important;
+
+@media (max-width: 600px) {
+  .nav-wrap {
+    height: 82px !important;
   }
-  .nav-links a {
-    font-size: 16px;
+  .nav-logo-img {
+    height: 60px !important;   /* FIX: smaller logo so links don't hide */
   }
+}
+
+/* FORCE NAV VISIBILITY */
+.nav-wrap {
+  overflow: visible !important;
+}
+
+.nav-links {
+  overflow: visible !important;
 }
 
 

@@ -32,21 +32,16 @@ export default function Services() {
           We design beautiful and premium setups for every special moment.
         </p>
 
-        <Swiper
-          modules={[Pagination, Autoplay]}
-          pagination={{ clickable: true }}
-          autoplay={{
-            delay: 3500,
-            disableOnInteraction: false,
-          }}
-          effect="fade"
-          fadeEffect={{ crossFade: true }}
-          slidesPerView={1.15}
-          centeredSlides
-          speed={1400}
-          spaceBetween={30}
-          style={{ paddingBottom: "50px" }}
-        >
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 3300, disableOnInteraction: false }}
+            speed={1200}
+            spaceBetween={20}
+            slidesPerView={1.15}
+            centeredSlides
+          >
+
 
           {events.map((event, index) => (
             <SwiperSlide key={index}>

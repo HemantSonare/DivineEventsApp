@@ -3,10 +3,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper";
-import { Pagination, Autoplay } from "swiper";
 import "swiper/css/effect-fade";
 
+import { Pagination, Autoplay, EffectFade } from "swiper";
 
 const events = [
   { title: "Haldi Ceremony", subtitle: "Bright and joyful yellow-themed décor", img: "/images/events/haldi.jpeg" },
@@ -21,43 +20,37 @@ const events = [
 ];
 
 export default function Services() {
-
   return (
     <section id="services" className="section">
       <div className="container">
 
-        {/* ⭐ UPDATED SECTION TITLE & SUBTEXT ⭐ */}
         <h2 className="section-title">Our Event Expertise</h2>
         <p className="section-sub">
           We design beautiful and premium setups for every special moment.
         </p>
 
-          <Swiper
-            modules={[Pagination, Autoplay]}
-            pagination={{ clickable: true }}
-            autoplay={{ delay: 3300, disableOnInteraction: false }}
-            speed={1200}
-            spaceBetween={20}
-            slidesPerView={1.15}
-            centeredSlides
-          >
-
-
+        <Swiper
+          modules={[Pagination, Autoplay, EffectFade]}
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 3800, disableOnInteraction: false }}
+          effect="fade"
+          fadeEffect={{ crossFade: true }}
+          speed={1600}
+          spaceBetween={20}
+          slidesPerView={1.12}
+          centeredSlides
+        >
           {events.map((event, index) => (
             <SwiperSlide key={index}>
               <div className="event-swipe-card">
 
-                {/* IMAGE BACKGROUND */}
                 <div
                   className="event-img"
                   style={{
-                    backgroundImage: event.img
-                      ? `url(${event.img})`
-                      : "none"
+                    backgroundImage: `url(${event.img})`
                   }}
                 />
 
-                {/* TEXT OVERLAY */}
                 <div className="event-overlay">
                   <h3>{event.title}</h3>
                   <p>{event.subtitle}</p>

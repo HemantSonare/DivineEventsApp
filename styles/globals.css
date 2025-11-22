@@ -348,4 +348,17 @@ body {
 .event-overlay h3,
 .event-overlay p { color: #fff !important; text-shadow: 0 2px 6px rgba(0,0,0,0.35) !important; }
 
+/* FINAL FIX — MOBILE GALLERY IMAGE CLIPPING ONLY */
+@media (max-width: 768px) {
+  .gallery-tile-3d { 
+    border-radius: 16px !important;
+    overflow: hidden !important;
+  }
+
+  .gallery-tile-3d img {
+    border-radius: inherit !important;
+  }
+}
+
+
 /* End of file */

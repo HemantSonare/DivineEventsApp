@@ -846,6 +846,18 @@ background: linear-gradient(
   opacity: 0.25;
 }
 
+.gallery-tile-3d img {
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 0.85s ease-in-out, transform 0.9s ease;
+}
+
+.gallery-tile-3d img.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
 @keyframes shimmer {
   0% { transform: translateX(-120%); }
   50% { transform: translateX(160%); }

@@ -9,7 +9,6 @@ const gallerySets = [
   ["/images/gallery/g7.jpeg", "/images/gallery/g8.jpeg", "/images/gallery/g9.jpeg"],
 ];
 
-
 export default function PremiumGallery() {
   const [indexes, setIndexes] = useState(gallerySets.map(() => 0));
 
@@ -35,11 +34,23 @@ export default function PremiumGallery() {
         <div className="gallery-grid-3d">
           {gallerySets.map((set, i) => (
             <div className="gallery-tile-3d" key={i}>
-              <img src={set[indexes[i]]} alt="luxury-event" />
+              
+              {/* ALL IMAGES FROM THIS SET OVERLAPPED, ONLY ACTIVE ONE VISIBLE */}
+              {set.map((img, idx) => (
+                <img
+                  key={idx}
+                  src={img}
+                  className={indexes[i] === idx ? "active" : ""}
+                  alt="luxury-event"
+                />
+              ))}
+
+              {/* GOLD SHIMMER */}
               <div className="shine"></div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

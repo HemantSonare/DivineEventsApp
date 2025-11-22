@@ -357,42 +357,41 @@ body {
   white-space: nowrap;   /* prevents wrapping */
 }
 
-/* SHARED BUTTON STYLE — SAME SHAPE FOR BOTH */
-.hero-ctas a,
-.hero-ctas button {
-    padding: 12px 26px !important;
-    border-radius: 26px !important; /* SAME RADIUS */
-    font-size: 16px !important;
-    font-weight: 600 !important;
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    height: 48px !important; /* SAME HEIGHT */
-    min-width: 170px !important; /* SAME WIDTH LOOK */
-    text-align: center;
+/* --- SAME SHAPE FOR BOTH BUTTONS (GLOBAL FIX) --- */
+.hero-ctas .btn-gold,
+.hero-ctas .btn-glass {
+  padding: 12px 28px !important;
+  border-radius: 26px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  height: 48px !important;          /* SAME HEIGHT */
+  min-width: 165px !important;       /* SAME WIDTH FEEL */
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
 }
 
-/* CHAT BUTTON (PEACH COLOR) */
-.btn-peach {
-    background: linear-gradient(135deg, #f9d3c1, #f7c6b2) !important;
-    border: none !important;
-    color: #4C1F10 !important;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.15) !important;
+/* CHAT BUTTON (KEEP ORIGINAL COLOR — ONLY SHAPE FIXED) */
+.hero-ctas .btn-gold {
+  background: linear-gradient(135deg, #f6d9c2, #ecc4b0) !important;
+  color: #4C1F10 !important;
+  border: none !important;
 }
 
-/* OUR SERVICES BUTTON (GLASS STYLE) */
-.btn-glass {
-    background: rgba(255,255,255,0.22) !important;
-    backdrop-filter: blur(10px) !important;
-    border: 1px solid rgba(255,255,255,0.55) !important;
-    color: #ffffff !important;
+/* OUR SERVICES (GLASS BUTTON) */
+.hero-ctas .btn-glass {
+  background: rgba(255,255,255,0.22) !important;
+  border: 1px solid rgba(255,255,255,0.55) !important;
+  backdrop-filter: blur(12px) !important;
+  color: white !important;
 }
 
-/* SPACING BETWEEN BUTTONS */
+/* Spacing between the two buttons */
 .hero-ctas {
-    display: flex !important;
-    gap: 14px !important;
-    margin-top: 22px !important;
+  display: flex !important;
+  gap: 14px !important;
+  margin-top: 22px !important;
 }
+
 
 /* END OF FILE */

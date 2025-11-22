@@ -4,6 +4,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
+import { Pagination, Autoplay } from "swiper";
+import "swiper/css/effect-fade";
+
 
 const events = [
   { title: "Haldi Ceremony", subtitle: "Bright and joyful yellow-themed décor", img: "/images/events/haldi.jpeg" },
@@ -30,13 +33,21 @@ export default function Services() {
         </p>
 
         <Swiper
-          modules={[Pagination]}
+          modules={[Pagination, Autoplay]}
           pagination={{ clickable: true }}
-          spaceBetween={20}
-          slidesPerView={1.05}
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+          }}
+          effect="fade"
+          fadeEffect={{ crossFade: true }}
+          slidesPerView={1.15}
           centeredSlides
-          style={{ paddingBottom: "40px" }}
+          speed={1400}
+          spaceBetween={30}
+          style={{ paddingBottom: "50px" }}
         >
+
           {events.map((event, index) => (
             <SwiperSlide key={index}>
               <div className="event-swipe-card">

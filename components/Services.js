@@ -32,7 +32,7 @@ export default function Services() {
         <Swiper
           modules={[Pagination, Autoplay, EffectFade]}
           pagination={{ clickable: true }}
-          autoplay={{ delay: 3800, disableOnInteraction: false }}
+          autoplay={{ delay: 2000, disableOnInteraction: false }}
           effect="fade"
           fadeEffect={{ crossFade: true }}
           speed={1600}

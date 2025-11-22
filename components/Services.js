@@ -43,7 +43,6 @@ export default function Services() {
           {events.map((event, index) => (
             <SwiperSlide key={index}>
               <div className="event-swipe-card">
-
                 <div
                   className="event-img"
                   style={{
@@ -55,7 +54,6 @@ export default function Services() {
                   <h3>{event.title}</h3>
                   <p>{event.subtitle}</p>
                 </div>
-
               </div>
             </SwiperSlide>
           ))}

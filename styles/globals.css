@@ -425,5 +425,19 @@ body {
   transform: translateY(-2px);
 }
 
+---------------------
+
+/* --- FINAL HARD OVERRIDE NAV SPACING FIX --- */
+header.nav-wrap .nav .nav-links {
+  display: flex !important;
+  gap: 22px !important;      /* final perfect spacing */
+  white-space: nowrap !important;
+}
+
+header.nav-wrap .nav .nav-links a {
+  font-size: 18px !important;
+  padding: 6px 8px !important;
+  white-space: nowrap !important;
+}
 
 /* END OF FILE */

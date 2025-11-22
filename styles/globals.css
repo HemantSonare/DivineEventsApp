@@ -513,4 +513,17 @@ body {
   }
 }
 
+/* === PREMIUM BUTTON FONT UPGRADE === */
+
+/* Load DM Sans (fall back included) */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&display=swap');
+
+/* Apply luxury font to both hero buttons */
+.hero-ctas .btn-gold,
+.hero-ctas .btn-glass {
+  font-family: 'DM Sans', Inter, sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.3px;          /* subtle premium spacing */
+  font-size: 17px !important;     /* modern clean size */
+}
 /* END OF FILE */

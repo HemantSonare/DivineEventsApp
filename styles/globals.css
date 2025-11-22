@@ -427,17 +427,22 @@ body {
 
 ---------------------
 
-/* --- FINAL HARD OVERRIDE NAV SPACING FIX --- */
-header.nav-wrap .nav .nav-links {
-  display: flex !important;
-  gap: 22px !important;      /* final perfect spacing */
-  white-space: nowrap !important;
-}
 
-header.nav-wrap .nav .nav-links a {
-  font-size: 18px !important;
-  padding: 6px 8px !important;
-  white-space: nowrap !important;
+/* --- FIX: MOBILE NAVBAR OVERFLOW (Ensures "Contact" is visible) --- */
+@media (max-width: 600px) {
+    /* Target the main navigation links container */
+    .nav-links {
+        /* Reduce the space between links */
+        gap: 12px !important;
+    }
+
+    /* Target the links themselves */
+    .nav-links a {
+        /* Reduce font size slightly more if needed to gain space */
+        font-size: 16px !important; 
+        /* Minimize padding to reclaim horizontal space */
+        padding: 6px 4px !important; 
+    }
 }
 
 /* END OF FILE */

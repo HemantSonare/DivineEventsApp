@@ -51,7 +51,7 @@ export default function Hero(){
           </p>
 
           <div className="hero-ctas">
-            <button className="btn-gold" onClick={openWhats}>Chat With Our Team</button>
+            <button className="btn-gold" onClick={openWhats}>Chat With Us</button>
             <a href="#services" className="btn-glass">Our Services</a>
           </div>
         </motion.div>

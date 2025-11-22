@@ -1004,3 +1004,18 @@ background: linear-gradient(
 .swiper-slide-active .event-overlay {
   opacity: 1 !important;
 }
+/* ======== FIX: SWIPER PAGINATION BELOW CARD ======== */
+
+.section #services .swiper {
+  padding-bottom: 48px !important; /* more space for dots */
+}
+
+.swiper-pagination {
+  bottom: -6px !important;  /* push dots downward */
+  position: relative !important;
+  margin-top: 12px;
+}
+
+.swiper-pagination-bullets {
+  transform: translateY(20px); /* safe push */
+}

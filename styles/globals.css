@@ -731,3 +731,22 @@ body {
     clip-path: inset(0 round 20px);
     -webkit-clip-path: inset(0 round 20px);
 }
+
+/* === MOBILE GALLERY FIX: SWITCH TO 2-COLUMN GRID === */
+@media (max-width: 768px) {
+  .gallery-grid-3d {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 18px !important;
+  }
+
+  .gallery-tile-3d {
+    height: 240px !important; /* Slightly taller for clearer visibility */
+  }
+}
+
+/* OPTIONAL: Super tiny phones → 1 column */
+@media (max-width: 480px) {
+  .gallery-grid-3d {
+    grid-template-columns: 1fr !important;
+  }
+}

@@ -703,3 +703,31 @@ body {
     transform-origin: center;
   }
 }
+
+
+/* FINAL iOS SAFARI FIX FOR GALLERY ROUND CORNERS */
+.gallery-tile-3d {
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    position: relative;
+}
+
+/* NEW COVER LAYER TO FORCE CLIPPING */
+.gallery-tile-inner {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    overflow: hidden !important;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+/* IMAGE STAYS INSIDE THE INNER WRAPPER */
+.gallery-tile-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    will-change: transform, opacity;
+    clip-path: inset(0 round 20px);
+    -webkit-clip-path: inset(0 round 20px);
+}

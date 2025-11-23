@@ -106,14 +106,16 @@ export default function PremiumGallery() {
           {gallerySets.map((set, i) => (
             <div className="gallery-tile-3d" key={i} style={{ transitionDelay: `${i * 80}ms` }}>
               {/* multiple images stacked; only active has class active */}
-              {set.map((img, idx) => (
-                <img
+              <div className="gallery-tile-inner">
+                {set.map((img, idx) => (
+                 <img
                   key={idx}
                   src={img}
                   alt={`gallery-${i}-${idx}`}
-                  className={indexes[i] === idx ? "active" : ""}
-                />
-              ))}
+                 className={indexes[i] === idx ? "active" : ""}
+                 />
+               ))}
+              </div>
 
               {/* gold shimmer + soft vignette */}
               <div className="shine" />

@@ -751,3 +751,27 @@ body {
   }
 }
 
+
+/* --- IMPROVE MOBILE SERVICE CARD HEIGHT --- */
+@media (max-width: 600px) {
+
+  /* Increase the service card vertical height */
+  .event-swipe-card {
+    aspect-ratio: 3/4 !important;  /* taller card */
+    height: 420px !important;      /* fixed fallback height */
+  }
+
+  /* Ensure inner image scales properly */
+  .event-img {
+    object-fit: cover !important;
+  }
+
+  /* Keep pagination dots properly spaced under card */
+  #services .swiper {
+    padding-bottom: 70px !important; 
+  }
+
+  #services .swiper-pagination {
+    margin-top: 18px !important;
+  }
+}

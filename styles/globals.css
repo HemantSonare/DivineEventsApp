@@ -674,3 +674,32 @@ body {
 }
 
 /* END OF FILE */
+
+
+/* ===== UNIVERSAL MOBILE FIX: prevent gallery image overflow ===== */
+@media (max-width: 768px) {
+
+  /* Force gallery tile to clip properly */
+  .gallery-tile-3d {
+    overflow: hidden !important;
+    border-radius: 18px !important;
+    position: relative;
+    isolation: isolate; /* important for chrome android */
+  }
+
+  /* Clip the image safely during animations */
+  .gallery-tile-3d img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit !important;
+    
+    /* Android Chrome + iOS Safari fix */
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    -webkit-clip-path: inset(0 round 18px);
+    clip-path: inset(0 round 18px);
+
+    /* Avoid flicker when animating */
+    will-change: transform, opacity;
+    transform-origin: center;
+  }
+}
